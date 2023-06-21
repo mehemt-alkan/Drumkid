@@ -1,0 +1,97 @@
+* {
+  box-sizing: border-box;
+  font-family: arial;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.piano {
+  width: 600px;
+  height: 300px;
+  position: relative;
+}
+
+.keyBlack {
+  padding-left: 5%;
+  position: absolute;
+  height: 60%;
+  width: 100%;
+  z-index: 2;
+  display: flex;
+  box-sizing: border-box;
+}
+
+.keyBlack a {
+  display: block;
+  width: calc(10% - 4px);
+  margin: 0px 2px 0px 2px;
+  height: 100%;
+  background: black;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.keyBlack a:nth-child(3) {
+  margin-left: calc(10% + 10px);
+}
+.keyBlack a:nth-child(6) {
+  margin-left: calc(10% + 16px);
+}
+
+.keyWhite {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  display: flex;
+}
+
+.keyWhite a {
+  display: block;
+  width: calc(10% - 4px);
+  margin: 0px 2px 0px 2px;
+  height: 100%;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.keyBlack a:active {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    0deg,
+    rgba(94, 94, 94, 1) 0%,
+    rgba(0, 0, 0, 1) 100%
+  );
+}
+
+.keyWhite a:active {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(217, 217, 217, 1) 100%
+  );
+}
+
+.keyBlack a {
+  text-decoration: none;
+  text-align: center;
+  line-height: 300px;
+  font-size: 30px;
+  color: #333;
+}
+
+.keyWhite a {
+  text-decoration: none;
+  text-align: center;
+  line-height: 550px;
+  font-size: 30px;
+  color: #ccc;
+}
